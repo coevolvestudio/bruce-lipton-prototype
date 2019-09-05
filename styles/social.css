@@ -1,0 +1,35 @@
+
+
+
+.social__side-bar {
+	position: fixed;
+	top: 70vh;
+	left: 0;
+	padding: 10px;
+	/*height: 150px;*/
+	width: 50px;
+	background-color: darkgrey;
+	border-top-right-radius: 17px;
+	border-bottom-right-radius: 17px;
+}
+
+.social__CTA {
+	display: inline-block;
+	margin: 0 0 10px 0;
+	font-size: .75rem;
+	text-align: center;
+}
+
+.social__circle {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 5px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: lightgrey;
+}
+
+.social__icon {
+	height: 20px;
+}
