@@ -1,0 +1,29 @@
+
+
+.frame { margin: -10px }
+
+.frame__mobile { z-index: 8; }
+
+.frame__mobile-message {
+	/*z-index: 9;*/
+	margin-top: 20vh;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+
+.frame__content-screen {
+		/*z-index: 8;*/
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: white;
+	}
+
+@media (min-width: 950px) {
+	.frame__mobile { display: none; }
+	.frame__mobile-message { display: none; }
+	.frame__content-screen { display: none; }
+}

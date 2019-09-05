@@ -1,0 +1,53 @@
+
+
+.hero__play-button { display: none }
+
+.hero { margin-top: -150px; }
+
+@media (min-width: 950px) {
+
+	.hero__stuff-box {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.hero__img { width: 600px; }
+
+	.hero__UVP-box { 
+		padding: 40px;
+		max-width: 400px;
+	}
+	
+	.hero__UVP-copy {
+		font-size: 2rem;
+	}
+
+	.hero__play-button {
+		display: block;
+		position: absolute;
+		top: 40%;
+		right: 50%;
+		height: 70px;
+		width: 70px;
+		border-radius: 35px;
+		background-color: white;
+		opacity: .7;
+	}
+
+	.hero__play-button:hover { 
+		opacity: 1; 
+		cursor: pointer;
+	}
+
+	.hero__play-icon {
+		position: relative;
+		top: 15px;
+		margin-left: 20px;
+		height: 40px;
+	}
+}
+
+@media (min-width: 1150px) {
+	.hero__img { width: 855px; }
+	.hero__play-button { top: 50%; right: 30%;}
+}
