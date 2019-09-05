@@ -45,39 +45,49 @@
 	</div>
 
 	<nav>
-		<span class="nav__link">About</span>
-		<span class="nav__link">Resources</span>
-		<span class="nav__link">Store</span>
-		<span class="nav__link">Contact</span>
+		<div class="nav__box"><!-- ABOUT -->
+			<span id="about" class="nav__link">About</span>
+			<div id="about-dropdown" class="nav__dropdown ui__hidden">
+				<span class="nav__dropdown-option">The Work of Bruce Lipton</span>
+				<span class="nav__dropdown-option">Membership</span>
+				<span class="nav__dropdown-option">Media &#38; Affiliate Info</span>
+			</div><!-- ABOUT DROPDOWN -->
+		</div><!-- ABOUT -->
+
+		<div class="nav__box"><!-- RESOURCES -->
+			<span id="resources" class="nav__link">Resources</span>
+			<div id="resources-dropdown" class="nav__dropdown ui__hidden">
+				<span class="nav__dropdown-option">Content</span>
+				<span class="nav__dropdown-option">Services</span>
+				<span class="nav__dropdown-option">Events</span>
+				<span class="nav__dropdown-option">All</span>
+				<hr>
+				<span class="nav__dropdown-option">Moderation</span>
+			</div><!-- RESOURCES DROPDOWN -->
+		</div><!-- RESOURCES -->
+
+		<div class="nav__box"><!-- STORE -->
+			<span id="store" class="nav__link">Store</span>
+			<div id="store-dropdown" class="nav__dropdown ui__hidden">
+				<span class="nav__dropdown-option">Books</span>
+				<span class="nav__dropdown-option">Streaming</span>
+				<span class="nav__dropdown-option">DVD/Video</span>
+				<span class="nav__dropdown-option">Art</span>
+				<span class="nav__dropdown-option">Music</span>
+				<span class="nav__dropdown-option">All</span>
+			</div><!-- STORE DROPDOWN -->
+		</div><!-- STORE -->
+
+		<div class="nav__box"><!-- CONTACT -->
+			<span id="contact" class="nav__link">Contact</span>
+			<div id="contact-dropdown" class="nav__dropdown ui__hidden">
+				<span class="nav__dropdown-option">Customer Service</span>
+				<span class="nav__dropdown-option">Lectures &#38; Events</span>
+				<span class="nav__dropdown-option">Questions for Bruce</span>
+			</div><!-- CONTACT DROPDOWN -->
+		</div><!-- CONTACT -->
 	</nav>
-	<div class="nav__dropdown-menus">
-		<div class="nav__dropdown ui__hidden">
-			<span class="nav__dropdown-option">The Work of Bruce Lipton</span>
-			<span class="nav__dropdown-option">Membership</span>
-			<span class="nav__dropdown-option">Media &#38; Affiliate Info</span>
-		</div><!-- ABOUT DROPDOWN -->
-		<div class="nav__dropdown ui__hidden">
-			<span class="nav__dropdown-option">Content</span>
-			<span class="nav__dropdown-option">Services</span>
-			<span class="nav__dropdown-option">Events</span>
-			<span class="nav__dropdown-option">All</span>
-			<hr>
-			<span class="nav__dropdown-option">Moderation</span>
-		</div><!-- RESOURCES DROPDOWN -->
-		<div class="nav__dropdown ui__hidden">
-			<span class="nav__dropdown-option">Books</span>
-			<span class="nav__dropdown-option">Streaming</span>
-			<span class="nav__dropdown-option">DVD/Video</span>
-			<span class="nav__dropdown-option">Art</span>
-			<span class="nav__dropdown-option">Music</span>
-			<span class="nav__dropdown-option">All</span>
-		</div><!-- STORE DROPDOWN -->
-		<div class="nav__dropdown ui__hidden">
-			<span class="nav__dropdown-option">Customer Service</span>
-			<span class="nav__dropdown-option">Lectures &#38; Events</span>
-			<span class="nav__dropdown-option">Questions for Bruce</span>
-		</div><!-- CONTACT DROPDOWN -->
-	</div><!-- DROPDOWN MENUS -->
+	
 	<div class="hero">
 		<div class="hero__stuff-box">
 			<img class="hero__img" src="img/bruce.jpg" alt="Bruce Lipton" nopin="nopin">
@@ -94,5 +104,55 @@
 
 </div><!-- FRAME -->
 
+<script type="text/javascript">
+	
+	// NAV
+		const about = document.getElementById("about");
+		const aboutDropdown =  document.getElementById("about-dropdown");
+
+		about.addEventListener("click", function() {
+			aboutDropdown.classList.toggle("ui__hidden");
+			resourcesDropdown.classList.add("ui__hidden");
+			storeDropdown.classList.add("ui__hidden");
+			contactDropdown.classList.add("ui__hidden");
+		});
+
+		const resources = document.getElementById("resources");
+		const resourcesDropdown =  document.getElementById("resources-dropdown");
+
+		resources.addEventListener("click", function() {
+			aboutDropdown.classList.add("ui__hidden");
+			resourcesDropdown.classList.toggle("ui__hidden");
+			storeDropdown.classList.add("ui__hidden");
+			contactDropdown.classList.add("ui__hidden");
+		});
+
+		const store = document.getElementById("store");
+		const storeDropdown =  document.getElementById("store-dropdown");
+
+		store.addEventListener("click", function() {
+			aboutDropdown.classList.add("ui__hidden");
+			resourcesDropdown.classList.add("ui__hidden");
+			storeDropdown.classList.toggle("ui__hidden");
+			contactDropdown.classList.add("ui__hidden");
+		});
+
+		const contact = document.getElementById("contact");
+		const contactDropdown =  document.getElementById("contact-dropdown");
+
+		contact.addEventListener("click", function() {
+			aboutDropdown.classList.add("ui__hidden");
+			resourcesDropdown.classList.add("ui__hidden");
+			storeDropdown.classList.add("ui__hidden");
+			contactDropdown.classList.toggle("ui__hidden");
+		});
+
+</script>
+
+
 </body>
 </html>
+
+
+
+

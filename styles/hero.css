@@ -25,7 +25,7 @@
 	.hero__play-button {
 		display: block;
 		position: absolute;
-		top: 40%;
+		top: 30%;
 		right: 50%;
 		height: 70px;
 		width: 70px;
@@ -49,5 +49,5 @@
 
 @media (min-width: 1150px) {
 	.hero__img { width: 855px; }
-	.hero__play-button { top: 50%; right: 30%;}
+	.hero__play-button { top: 40%; right: 30%;}
 }
