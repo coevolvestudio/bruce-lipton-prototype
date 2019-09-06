@@ -7,6 +7,6 @@
 
 .form__textarea {
 	padding: 7px;
-	min-width: 300px;
+	width: 100%;
 	font-size: 1.3rem;
 }

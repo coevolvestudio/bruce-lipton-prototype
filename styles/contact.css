@@ -1,8 +1,17 @@
 
 
+.contact__header {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 750px;
+}
+
 .contact__main {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 	padding: 20px;
 }
 
