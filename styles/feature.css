@@ -1,0 +1,11 @@
+
+
+
+.feature {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feature__text-box {
+	padding: 60px 30px;
+}

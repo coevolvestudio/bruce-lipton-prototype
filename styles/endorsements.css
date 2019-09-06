@@ -1,0 +1,15 @@
+
+
+
+.endorsements {
+	height: 60px;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	background-color: lightgrey;
+}
+
+.endorsement__quote {}
+.endorsement__attribution {}
+.endorsements__read-more__box {}
+.endorsements__read-more__box:hover {}
+.endorsements__read-more__copy {}
