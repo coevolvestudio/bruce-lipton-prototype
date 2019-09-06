@@ -1,0 +1,12 @@
+
+
+.form__text-in {
+	padding: 3px;
+	font-size: 1.3rem;
+}
+
+.form__textarea {
+	padding: 7px;
+	min-width: 300px;
+	font-size: 1.3rem;
+}

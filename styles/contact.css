@@ -1,0 +1,55 @@
+
+
+.contact__main {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+}
+
+/* ================================ FORM ELEMENTS ========= */
+	.contact__form {
+		margin: 0 20px;
+	}
+
+	.contact__message-selectors {
+		display: flex;
+	}
+
+	.contact__support-type__box {
+		display: flex;
+		flex-direction: column;
+		margin: 15px 0;
+	}
+
+	.contact__support-type__options {
+		margin: 10px 0;
+	}
+
+	.contact__selector-area {
+		margin: 30px 0;
+	}
+
+	.contact__selector-section {
+		display: inline-block;
+		margin: 10px 0 0 0;
+		font-weight: 700;
+	}
+
+
+	.contact__selector-label {
+		margin: 0 25px 0 0;
+	}
+
+/* ================================ SUGGESTIONS BOX ======= */
+
+	.contact__suggestions-box {
+		margin: 0 20px;
+		padding: 12px;
+
+		border: 1px solid grey;
+		border-radius: 6px;
+	}
+
+	.contact__suggestion-intro {
+		max-width: 300px;
+	}
