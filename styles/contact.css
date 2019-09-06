@@ -59,6 +59,22 @@
 		border-radius: 6px;
 	}
 
+	.contact__suggestion-CTA {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+
 	.contact__suggestion-intro {
 		max-width: 300px;
+	}
+
+/* ================================ ERROR BOX ============= */
+
+	.contact__error-box {
+		padding: 10px;
+	}
+
+	.contact__error-copy {
+		color: red;
 	}

@@ -1,7 +1,7 @@
 
 
 .form__text-in {
-	padding: 3px;
+	padding: 5px;
 	font-size: 1.3rem;
 }
 
@@ -9,4 +9,13 @@
 	padding: 7px;
 	width: 100%;
 	font-size: 1.3rem;
+}
+
+.form__send-button {
+	padding: 5px;
+	font-size: 1.3rem;
+}
+
+.form__send-button:hover {
+	background-color: slategrey;
 }

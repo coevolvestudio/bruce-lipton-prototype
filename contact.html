@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/form.css">
 
 	<script type="text/javascript" src="scripts/nav.js"></script>
+	<script type="text/javascript" src="scripts/contact.js"></script>
 </head>
 <body>
 
@@ -172,11 +173,19 @@
 				</div><!-- MESSAGE SELECTORS -->
 			</div><!-- SELECTOR FIELDS -->
 
-			<textarea id="message-content" class="form__textarea">Enter your message here.
-			</textarea>
+			<textarea id="message-content" class="form__textarea">Enter your message here.</textarea>
+
+			<div class="contact__error-box">
+				<p id="error-copy" class="contact__error-copy"></p>
+			</div><!-- ERROR BOX -->
+
+			<button id="send-1" class="form__send-button" type="button">
+					Send
+			</button>
 		</form>
 
 		<div class="contact__suggestions-box">
+			<span class="contact__suggestion-CTA"><em>Try these first!</em></span>
 			<div class="contact__suggestion">
 				<h4 class="contact__suggestion-title">
 					Account Management
@@ -221,6 +230,9 @@
 <script type="text/javascript">
 	
 	nav();
+
+	send();
+
 		
 
 </script>
