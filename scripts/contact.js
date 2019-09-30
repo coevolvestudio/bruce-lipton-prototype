@@ -1,4 +1,5 @@
 
+
 // VALIDATE & SEND
 	const invalidMsgs = ["Enter your message here.","penis"];
 
@@ -101,9 +102,9 @@
 			{tag: "childhood", value: 2},
 			{tag: "lifestyle", value: 4}
 			]
-		}
+		},
 
-	{title: "Getting Started with Psych-K", summary: "Psych-K is a popular method for bringing balance to unproductive beliefs. In this article Rob Williams explains how to get started.", link:"URL",
+		{title: "Getting Started with Psych-K", summary: "Psych-K is a popular method for bringing balance to unproductive beliefs. In this article Rob Williams explains how to get started.", link:"URL",
 		tags: [
 			{tag: "psychk", value: 9},
 			{tag: "beliefchange", value: 5},
@@ -136,88 +137,109 @@
 			{tag: "support", value: 7},
 			{tag: "finances", value: 6}
 			]
-		}
+		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
-			]
-		}
-
-		{title: "string", summary: "string", link:"URL",
-		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		},
 
 		{title: "string", summary: "string", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
+			]
+		},
+
+		{title: "string", summary: "string", link:"URL",
+		tags: [
+			{tag: "string", value: 0},
+			{tag: "string", value: 0},
+			{tag: "string", value: 0}
 			]
 		}
 	]
 
 // SORT DISPLAY
 
-	// let articleNames = articles.map()
+	// msgBox.addEventListener('keydown', logKey);
 
-	const supportArticles = articles.filter(function(article) {
-		if(article.tags[2].tag === "support") {
-			return true;
+	// function logKey(e) {
+	//   console.log(e.code);
+	// }
+
+	// console.log(msgBox);
+
+
+	// const getKey = function() {
+	// 	document.addEventListener('keydown', logKey)
+	// }
+
+
+	const msgBoxListener = function() {
+
+		const msgBox = document.getElementById("message-content");
+
+		msgBox.addEventListener('keydown', awaitSpace);
+
+		function awaitSpace(e) {
+			if(e.code === "Space") {
+				readMsg();
+			} else {
+				return;
+			}
+		}	
+
+		function readMsg() {
+			const msg = document.getElementById("message-content").value;
+			console.log(msg);
 		}
-	});
 
-	console.log(supportArticles);
-
-
-
-
+	}
 
 
 
