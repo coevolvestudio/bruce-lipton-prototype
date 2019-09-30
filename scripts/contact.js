@@ -214,7 +214,20 @@
 			"son",
 			"daughter",
 			"listen",
-			"podcast"
+			"podcast",
+			"event",
+			"lecture",
+			"subconscious",
+			"Psych-K",
+			"psychk",
+			"help",
+			"desperate",
+			"emergency",
+			"cancer",
+			"diagnosis",
+			"fatal",
+			"come",
+			"payment",
 		]
 
 			// The keyword list does not currently account for keywords followed imeediately by punctuation.
