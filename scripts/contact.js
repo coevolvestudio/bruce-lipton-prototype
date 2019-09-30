@@ -206,19 +206,18 @@
 
 // SORT DISPLAY
 
-	// msgBox.addEventListener('keydown', logKey);
+	// KEY WORDS
+		const keyWords = [
+			"belief",
+			"account",
+			"summit",
+			"son",
+			"daughter",
+			"listen",
+			"podcast"
+		]
 
-	// function logKey(e) {
-	//   console.log(e.code);
-	// }
-
-	// console.log(msgBox);
-
-
-	// const getKey = function() {
-	// 	document.addEventListener('keydown', logKey)
-	// }
-
+			// The keyword list does not currently account for keywords followed imeediately by punctuation.
 
 	const msgBoxListener = function() {
 
@@ -235,8 +234,26 @@
 		}	
 
 		function readMsg() {
-			const msg = document.getElementById("message-content").value;
-			console.log(msg);
+			let msg = document.getElementById("message-content").value;
+			let msgWords = msg.split(" ");
+
+			for(i=1; i<msgWords.length; i++) {
+				let word = msgWords[i];
+
+				for(j=0; j<keyWords.length; j++) {
+					if(word === keyWords[j]) {
+						console.log(word);
+					}
+				}
+			}
+
+			// msgWords.filter(function(word) {
+			// 	if(word === keyWords[0]) {
+			// 		console.log(word);
+			// 	}
+			// });
+
+			// console.log(msgWords);
 		}
 
 	}
