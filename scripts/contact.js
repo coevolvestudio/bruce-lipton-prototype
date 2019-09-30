@@ -44,6 +44,51 @@
 	// 	]
 	// }
 
+	let tagList = [
+		{name: "beliefchange", rank: 0, 
+			keywords: ["belief", "sunconscious", "reprogramming"]
+		},
+		{name: "belief", rank: 0, 
+			keywords: ["belief", "thinking", "wiring"]
+		},
+		{name: "habits", rank: 0,
+			keywords: ["habits", "routine", "actions", "pattern"]
+		},
+		{name: "accountmgmt", rank: 0,
+			keywords: ["account", "membership", "profile"]
+		},
+		{name: "finances", rank: 0,
+			keywords: ["finances", "money", "budget"]
+		},
+		{name: "support", rank: 0,
+			keywords: ["support", "customer", "help"]
+		},
+		{name: "events", rank: 0,
+			keywords: ["summit", "event", "invite"]
+		},
+		{name: "invitebruce", rank: 0,
+			keywords: ["invite", "speaker", "coaching"]
+		},
+		{name: "community", rank: 0,
+			keywords: ["community", "participation", "conversation"]
+		},
+		{name: "lifestyle", rank: 0,
+			keywords: ["lifestyle", "way", "pattern"]
+		},
+		{name: "purchases", rank: 0,
+			keywords: ["purchase", "bought", "receive"]
+		},
+		{name: "childhood", rank: 0,
+			keywords: ["childhood", "kid", "young", "taught"]
+		},
+		{name: "psychk", rank: 0,
+			keywords: ["psychk", "Psych-K", "Psych K"]
+		},
+		{name: "treatment", rank: 0,
+			keywords: ["treatment", "diagnosis", "cure"]
+		}
+	]
+
 	const articles = [
 		{title: "Reprogram the Subconscious while Asleep", summary: "Bruce Lipton, with special guest Niel Gaiman, explains the methods for accessing dreams with nothing but a spellbook bound in human skin and a handful of sand.", link:"URL",
 		tags: [
@@ -210,6 +255,9 @@
 		const keyWords = [
 			"belief",
 			"account",
+			"purchase",
+			"bought",
+			"receive",
 			"summit",
 			"son",
 			"daughter",
@@ -220,6 +268,7 @@
 			"subconscious",
 			"Psych-K",
 			"psychk",
+			"Psych K",
 			"help",
 			"desperate",
 			"emergency",
@@ -228,12 +277,29 @@
 			"fatal",
 			"come",
 			"payment",
+			"support",
+			"reprogramming",
+			"wiring",
+			"diagnosis",
+			"treatment",
+			"cure",
+			"routine",
+			"habits",
+			"actions",
+			"pattern",
+			"lifestyle",
+			"way",
+			"childhood",
+			"kid",
+			"young",
+			"taught"
 		]
 
 			// The keyword list does not currently account for keywords followed imeediately by punctuation.
 
 	const msgBoxListener = function() {
 
+		let activeKeywords = [];
 		const msgBox = document.getElementById("message-content");
 
 		msgBox.addEventListener('keydown', awaitSpace);
@@ -249,24 +315,40 @@
 		function readMsg() {
 			let msg = document.getElementById("message-content").value;
 			let msgWords = msg.split(" ");
+			activeKeywords = [];
 
 			for(i=1; i<msgWords.length; i++) {
 				let word = msgWords[i];
 
 				for(j=0; j<keyWords.length; j++) {
 					if(word === keyWords[j]) {
-						console.log(word);
+						activeKeywords.push(word);
+						
 					}
 				}
 			}
+			pickArticles();
+		}
 
-			// msgWords.filter(function(word) {
-			// 	if(word === keyWords[0]) {
-			// 		console.log(word);
-			// 	}
-			// });
+		function pickArticles() {
 
-			// console.log(msgWords);
+			rankTags();
+
+			console.log(activeKeywords);
+		}
+
+
+
+		function rankTags() {
+			let rankedTags = tagList.map(function(tag){
+				return tag;
+			});
+
+			activeKeywords.forEach(function() {
+
+			});
+
+			console.log(rankedTags);
 		}
 
 	}
