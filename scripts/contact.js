@@ -46,8 +46,8 @@
 	const articles = [
 		{title: "Reprogram the Subconscious while Asleep", summary: "Bruce Lipton, with special guest Niel Gaiman, explains the methods for accessing dreams with nothing but a spellbook bound in human skin and a handful of sand.", link:"URL",
 		tags: [
-			{tag: "beliefchange", value: 8},
-			{tag: "dreams", value: 5},
+			{tag: "beliefchange", value: 9},
+			{tag: "belief", value: 9},
 			{tag: "habits", value: 4}
 			]
 		},
@@ -64,7 +64,8 @@
 		tags: [
 			{tag: "events", value: 8},
 			{tag: "invitebruce", value: 9},
-			{tag: "support", value: 4}
+			{tag: "support", value: 4},
+			{tag: "community", value: 3}
 			]
 		},
 
@@ -76,59 +77,64 @@
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Find Your Previous Purchases", summary: "Downloads, streaming content and all other previous purchases are still available. This video shows you how to find them.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "support", value: 7},
+			{tag: "purchases", value: 8},
+			{tag: "lifestyle", value: 2}
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Self-Limiting Beliefs", summary: "Understand what makes a belief self-limiting, where they come from, and the reasons they're so hard to change", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "belief", value: 9},
+			{tag: "beliefchange", value: 7},
+			{tag: "childhood", value: 5}
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Overview of Belief Change Modalities", summary: "There are many modalities of belief change available. This article reviews several to help you determine which is right for you.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "beliefchange", value: 9},
+			{tag: "belief", value: 6},
+			{tag: "habits", value: 4},
+			{tag: "childhood", value: 2},
+			{tag: "lifestyle", value: 4}
 			]
 		}
 
-	{title: "string", summary: "string", link:"URL",
+	{title: "Getting Started with Psych-K", summary: "Psych-K is a popular method for bringing balance to unproductive beliefs. In this article Rob Williams explains how to get started.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "psychk", value: 9},
+			{tag: "beliefchange", value: 5},
+			{tag: "treatment", value: 7}
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Financial and Geographic Limitations and Psych-K Treatment", summary: "Rob Williams gives advice to seekers finding it difficult to attend Psych-K events.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "psychk", value: 8},
+			{tag: "lifestyle", value: 3},
+			{tag: "treatment", value: 6},
+			{tag: "finances", value: 6}
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Community Support for Belief Change", summary: "Premium membership to brucelipton.com is a fantastic way to find real human support on your journey to a renewed subconscious.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "community", value: 7},
+			{tag: "beliefchange", value: 6},
+			{tag: "lifestyle", value: 3},
+			{tag: "habits", value: 5}
 			]
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Premium Membership Details", summary: "Learn about all of the features and benefits of premium membership here at brucelipton.com.", link:"URL",
 		tags: [
-			{tag: "string", value: int},
-			{tag: "string", value: int},
-			{tag: "string", value: int}
+			{tag: "community", value: 5},
+			{tag: "lifestyle", value: 4},
+			{tag: "support", value: 7},
+			{tag: "finances", value: 6}
 			]
 		}
 
