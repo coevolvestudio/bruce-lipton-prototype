@@ -328,7 +328,7 @@
 				}
 			}
 			pickArticles();
-		}
+		} 
 
 		function pickArticles() {
 
