@@ -349,6 +349,31 @@
 			});
 
 			console.log(rankedTags);
+
+			choseArticles();
+		}
+
+
+		function choseArticles() {
+
+			deliverSuggestions();
+		}
+
+
+		function deliverSuggestions() {
+			let suggestionBoxOne = document.getElementById("suggestion-one");
+			let suggestionBoxTwo = document.getElementById("suggestion-two");
+
+			let suggestionContent = {title: "Sug Title", summary: "Here we have a summary"};
+
+			suggestionBoxOne.innerHTML = '<h4 class="contact__suggestion-title">' + suggestionContent.title +
+				'</h4>' +
+				'<p class="contact__suggestion-intro">' +
+				suggestionContent.summary	+
+				'</p>';
+
+			console.log(suggestionBoxTwo);
+
 		}
 
 	}
