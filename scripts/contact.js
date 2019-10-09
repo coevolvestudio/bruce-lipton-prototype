@@ -1,7 +1,7 @@
 
 
 // VALIDATE & SEND
-	const invalidMsgs = ["Enter your message here.","penis", "I don't like you."];
+	const invalidMsgs = ["Enter your message here.","penis"];
 
 	const errorInvalidMsg = "Please refine that message a bit so that we can provide you the best response.";
 
