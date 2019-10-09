@@ -361,18 +361,37 @@
 
 
 		function deliverSuggestions() {
-			let suggestionBoxOne = document.getElementById("suggestion-one");
-			let suggestionBoxTwo = document.getElementById("suggestion-two");
 
-			let suggestionContent = {title: "Sug Title", summary: "Here we have a summary"};
+			// SETTING UP VARIABLES
+				let suggestionBoxOne = document.getElementById("suggestion-one");
+				let suggestionBoxTwo = document.getElementById("suggestion-two");
+				let suggestionBoxThree = document.getElementById("suggestion-three");
+				let suggestionBoxFour = document.getElementById("suggestion-four");
+			
+			// PUTTING STUFF IN BOXES
+				suggestionBoxOne.innerHTML = '<h4 class="contact__suggestion-title">' + articles[0].title +
+					'</h4>' +
+					'<p class="contact__suggestion-intro">' +
+					articles[0].summary	+
+					'</p>';
 
-			suggestionBoxOne.innerHTML = '<h4 class="contact__suggestion-title">' + suggestionContent.title +
-				'</h4>' +
-				'<p class="contact__suggestion-intro">' +
-				suggestionContent.summary	+
-				'</p>';
+					suggestionBoxTwo.innerHTML = '<h4 class="contact__suggestion-title">' + articles[1].title +
+					'</h4>' +
+					'<p class="contact__suggestion-intro">' +
+					articles[1].summary	+
+					'</p>';
 
-			console.log(suggestionBoxTwo);
+					suggestionBoxThree.innerHTML = '<h4 class="contact__suggestion-title">' + articles[2].title +
+					'</h4>' +
+					'<p class="contact__suggestion-intro">' +
+					articles[2].summary	+
+					'</p>';
+
+					suggestionBoxFour.innerHTML = '<h4 class="contact__suggestion-title">' + articles[3].title +
+					'</h4>' +
+					'<p class="contact__suggestion-intro">' +
+					articles[3].summary	+
+					'</p>';
 
 		}
 
