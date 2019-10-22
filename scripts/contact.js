@@ -345,10 +345,12 @@
 			});
 
 			activeKeywords.forEach(function() {
-
+				rankedTags.forEach(function() {
+					console.log("stuff");
+				});
 			});
 
-			console.log(rankedTags);
+			// console.log(rankedTags);
 
 			choseArticles();
 		}
