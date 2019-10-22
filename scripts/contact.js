@@ -317,7 +317,7 @@
 			let msgWords = msg.split(" ");
 			activeKeywords = [];
 
-			for(i=1; i<msgWords.length; i++) {
+			for(i=0; i<msgWords.length; i++) {
 				let word = msgWords[i];
 
 				for(j=0; j<keyWords.length; j++) {
@@ -344,13 +344,20 @@
 				return tag;
 			});
 
-			activeKeywords.forEach(function() {
-				rankedTags.forEach(function() {
-					console.log("stuff");
-				});
-			});
+			for(i=0; i<activeKeywords.length; i++) {
+				for(j=0; j<rankedTags.length; j++) {
+					for(k=0; k<rankedTags[j].keywords.length; k++) {
+						if(activeKeywords[i] === rankedTags[j].keywords[k]) {
+							rankedTags[j].rank += 1;
+							console.log("hit");
+						} else {
+							console.log("miss");
+						}
+					};
+				};
+			};
 
-			// console.log(rankedTags);
+			console.log(rankedTags);
 
 			choseArticles();
 		}
