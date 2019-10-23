@@ -381,45 +381,27 @@
 
 			console.log(rankedTags);
 
-			// choseArticles();
+			// This piece ranks the articles
 
 			for(i=0; i<articles.length; i++) {
 				for(j=0; j<articles[i].tags.length; j++)
 					for(k=0;k<rankedTags.length; k++) {
 						if( articles[i].tags[j].tag === rankedTags[k].name) {
-							articles[i].rank += 1;
+							articles[i].rank += rankedTags[k].rank;
 							// console.log("match");
 						} else {
 							// console.log("mismatch");
 						}
 					}
 
-
-				console.log(articles[i].title + ", rank: " + articles[i].rank);
+				// console.log(articles[i].title + ", rank: " + articles[i].rank);
 			}
 
 			deliverSuggestions();
 		}
 
 
-		// function choseArticles() {
-
-		// 	for(i=0; i<articles.length; i++) {
-		// 		for(j=0; j<articles[i].tags.length; j++)
-		// 			for(k=0;k<rankedTags.length; k++) {
-		// 				if( articles[i].tags[j].tag === rankedTags.name[k]) {
-		// 					console.log("match");
-		// 				} else {
-		// 					console.log("mismatch");
-		// 				}
-		// 			}
-
-
-		// 		console.log(articles[i].title + ", rank: " + articles[i].rank);
-		// 	}
-
-		// 	deliverSuggestions();
-		// }
+		
 
 
 		function deliverSuggestions() {
@@ -429,30 +411,42 @@
 				let suggestionBoxTwo = document.getElementById("suggestion-two");
 				let suggestionBoxThree = document.getElementById("suggestion-three");
 				let suggestionBoxFour = document.getElementById("suggestion-four");
+
+				let rankedArticles = articles.sort(function(a1, a2) {
+					if(a1.rank > a2.rank) {
+						return -1;
+					} else {
+						return 1;
+					}
+				});
+
+				for (i=0; i<rankedArticles.length; i++) {
+					console.log("article: " + rankedArticles[i].title + ", rank: " + rankedArticles[i].rank);
+				}
 			
 			// PUTTING STUFF IN BOXES
-				suggestionBoxOne.innerHTML = '<h4 class="contact__suggestion-title">' + articles[0].title +
+				suggestionBoxOne.innerHTML = '<h4 class="contact__suggestion-title">' + rankedArticles[0].title +
 					'</h4>' +
 					'<p class="contact__suggestion-intro">' +
-					articles[0].summary	+
+					rankedArticles[0].summary	+
 					'</p>';
 
-					suggestionBoxTwo.innerHTML = '<h4 class="contact__suggestion-title">' + articles[1].title +
+					suggestionBoxTwo.innerHTML = '<h4 class="contact__suggestion-title">' + rankedArticles[1].title +
 					'</h4>' +
 					'<p class="contact__suggestion-intro">' +
-					articles[1].summary	+
+					rankedArticles[1].summary	+
 					'</p>';
 
-					suggestionBoxThree.innerHTML = '<h4 class="contact__suggestion-title">' + articles[2].title +
+					suggestionBoxThree.innerHTML = '<h4 class="contact__suggestion-title">' + rankedArticles[2].title +
 					'</h4>' +
 					'<p class="contact__suggestion-intro">' +
-					articles[2].summary	+
+					rankedArticles[2].summary	+
 					'</p>';
 
-					suggestionBoxFour.innerHTML = '<h4 class="contact__suggestion-title">' + articles[3].title +
+					suggestionBoxFour.innerHTML = '<h4 class="contact__suggestion-title">' + rankedArticles[3].title +
 					'</h4>' +
 					'<p class="contact__suggestion-intro">' +
-					articles[3].summary	+
+					rankedArticles[3].summary	+
 					'</p>';
 
 		}
