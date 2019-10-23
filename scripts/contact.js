@@ -87,7 +87,13 @@
 		},
 		{name: "treatment", rank: 0,
 			keywords: ["treatment", "diagnosis", "cure"]
-		}
+		},
+		{name: "emergency", rank: 0,
+			keywords: ["fatal", "diagnosis", "emergency", "desperate"]
+		},
+		{name: "offering", rank: 0,
+			keywords: ["offer", "opportunity", "partner"]
+		},
 	]
 
 	const articles = [
@@ -196,11 +202,11 @@
 		rank: 0
 		},
 
-		{title: "string", summary: "string", link:"URL",
+		{title: "Seek Immediate Help", summary: "Some concerns require that a seeker reach out for help through faster channels than we may be able to provide", link:"URL",
 		tags: [
-			{tag: "string", value: 0},
-			{tag: "string", value: 0},
-			{tag: "string", value: 0}
+			{tag: "emergency", value: 9},
+			{tag: "treatment", value: 7},
+			{tag: "support", value: 5}
 			],
 		rank: 0
 		},
@@ -385,8 +391,13 @@
 
 			// This piece ranks the articles
 
+			for(i=0;i<articles.length; i++) {
+				articles[i].rank = 0;
+				// console.log(articles[i]);
+			}
+
 			for(i=0; i<articles.length; i++) {
-				for(j=0; j<articles[i].tags.length; j++)
+				for(j=0; j<articles[i].tags.length; j++) {
 					for(k=0;k<rankedTags.length; k++) {
 						if( articles[i].tags[j].tag === rankedTags[k].name) {
 							articles[i].rank += rankedTags[k].rank;
@@ -395,7 +406,7 @@
 							// console.log("mismatch");
 						}
 					}
-
+				}
 				// console.log(articles[i].title + ", rank: " + articles[i].rank);
 			}
 
