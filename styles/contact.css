@@ -69,6 +69,8 @@
 		max-width: 300px;
 	}
 
+	.contact__help-link { font-style: italic; }
+
 /* ================================ ERROR BOX ============= */
 
 	.contact__error-box {
