@@ -357,14 +357,16 @@
 			console.log(activeKeywords);
 		}
 
-// let rankedTags = tagList.map(function(tag){
-// 	return tag;
-// });
+
 
 		function rankTags() {
-			let rankedTags = tagList.map(function(tag){
-				return tag;
-			});
+
+			let rankedTags = tagList;
+
+			for(i=0;i<rankedTags.length; i++) {
+				rankedTags[i].rank = 0;
+				// console.log(rankedTags[i]);
+			}
 
 			for(i=0; i<activeKeywords.length; i++) {
 				for(j=0; j<rankedTags.length; j++) {
