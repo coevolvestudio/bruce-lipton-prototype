@@ -400,7 +400,7 @@
 				for(j=0; j<articles[i].tags.length; j++) {
 					for(k=0;k<rankedTags.length; k++) {
 						if( articles[i].tags[j].tag === rankedTags[k].name) {
-							articles[i].rank += rankedTags[k].rank;
+							articles[i].rank += rankedTags[k].rank * articles[i].tags[j].value;
 							// console.log("match");
 						} else {
 							// console.log("mismatch");
