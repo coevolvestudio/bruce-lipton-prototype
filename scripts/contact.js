@@ -86,7 +86,7 @@
 			keywords: ["psychk", "Psych-K", "Psych K"]
 		},
 		{name: "treatment", rank: 0,
-			keywords: ["treatment", "diagnosis", "cure"]
+			keywords: ["treatment", "diagnosis", "cure", "treat"]
 		},
 		{name: "emergency", rank: 0,
 			keywords: ["fatal", "diagnosis", "emergency", "desperate"]
@@ -318,7 +318,8 @@
 			"childhood",
 			"kid",
 			"young",
-			"taught"
+			"taught",
+			"treat"
 		]
 
 			// The keyword list does not currently account for keywords followed imeediately by punctuation.
