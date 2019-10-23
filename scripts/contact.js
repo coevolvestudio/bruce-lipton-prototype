@@ -306,7 +306,6 @@
 			"support",
 			"reprogramming",
 			"wiring",
-			"diagnosis",
 			"treatment",
 			"cure",
 			"routine",
