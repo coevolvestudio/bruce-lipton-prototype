@@ -357,7 +357,9 @@
 			console.log(activeKeywords);
 		}
 
-
+// let rankedTags = tagList.map(function(tag){
+// 	return tag;
+// });
 
 		function rankTags() {
 			let rankedTags = tagList.map(function(tag){
@@ -379,18 +381,45 @@
 
 			console.log(rankedTags);
 
-			choseArticles();
-		}
-
-
-		function choseArticles() {
+			// choseArticles();
 
 			for(i=0; i<articles.length; i++) {
-				console.log(articles[i].title);
+				for(j=0; j<articles[i].tags.length; j++)
+					for(k=0;k<rankedTags.length; k++) {
+						if( articles[i].tags[j].tag === rankedTags[k].name) {
+							articles[i].rank += 1;
+							// console.log("match");
+						} else {
+							// console.log("mismatch");
+						}
+					}
+
+
+				console.log(articles[i].title + ", rank: " + articles[i].rank);
 			}
 
 			deliverSuggestions();
 		}
+
+
+		// function choseArticles() {
+
+		// 	for(i=0; i<articles.length; i++) {
+		// 		for(j=0; j<articles[i].tags.length; j++)
+		// 			for(k=0;k<rankedTags.length; k++) {
+		// 				if( articles[i].tags[j].tag === rankedTags.name[k]) {
+		// 					console.log("match");
+		// 				} else {
+		// 					console.log("mismatch");
+		// 				}
+		// 			}
+
+
+		// 		console.log(articles[i].title + ", rank: " + articles[i].rank);
+		// 	}
+
+		// 	deliverSuggestions();
+		// }
 
 
 		function deliverSuggestions() {
