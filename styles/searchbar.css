@@ -1,0 +1,21 @@
+.searchbar {
+
+	padding: 5px;
+	width: 100%;
+	border-radius: 5px; 
+
+	border: 1px solid #2d988b;
+		
+}
+
+.searchbar__outline {
+	display: inline-block;
+	outline: solid 2px rgba(25, 25, 25, .5);
+}
+.searchbar__basic-search-icon {
+	position: absolute; 
+	top: 0px;
+	height: 11px;
+	width: 11px;
+
+}
