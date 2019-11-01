@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/events.css">
 	<link rel="stylesheet" type="text/css" href="styles/layout.css">
 	<link rel="stylesheet" type="text/css" href="styles/footer.css">
+	<link rel="stylesheet" type="text/css" href="styles/mlp.css">
 
 	<script type="text/javascript" src="scripts/nav.js"></script>
 </head>
@@ -50,7 +51,20 @@
 				 <option value="arabic">Arabic</option>
 			</select>
 		</div><!-- TOP RIGHT -->
-	</div>
+
+		<div class="mlp__pull-out">
+			<div id="mlp-trigger" class="mlp__pull-out__trigger">
+				<span class="mlp__trigger-mark">&#948;</span>
+			</div><!-- TRIGGER -->
+
+			<div id="mlp-menu" class="mlp__pull-out__menu ui__hidden">
+				<ul>
+					<a href="prototype-about.html"><li>prototype — about</li></a>
+					<a href="components.html"><li>component list</li></a>
+				</ul>
+			</div><!-- MENU -->
+		</div><!-- MLP PULL OUT -->
+	</div><!-- TOP -->
 
 	<nav>
 		<div class="nav__box"><!-- ABOUT -->
@@ -253,6 +267,14 @@
 
 <script type="text/javascript">
 	
+	const mlpTrigger = document.getElementById("mlp-trigger");
+	const mlpMenu = document.getElementById("mlp-menu");
+
+	mlpTrigger.addEventListener("click", function() {
+		mlpMenu.classList.toggle("ui__hidden");
+		console.log("what gives?");
+	});
+
 	nav();
 		
 

@@ -1,0 +1,27 @@
+
+
+.mlp__pull-out {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: -3px -3px 0 0;
+	padding: 5px;
+
+	background-color: white;
+	border: 1px solid pink;
+	border-bottom-left-radius: 7px;
+	cursor: pointer;
+}
+
+.mlp__pull-out__trigger {
+
+}
+
+.mlp__trigger-mark {
+	color: pink;
+}
+
+.mlp__pull-out__menu {
+	padding: 10px;
+}
+
